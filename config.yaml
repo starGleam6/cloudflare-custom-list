@@ -1,0 +1,15 @@
+api_key: xxxx # CloudFlare ApiKey
+api_email: test@test.com # CloudFlare 账号
+account_id: aaaa # CloudFlare 账户 ID
+list_id: bbb # 管理账户，配置列表 ID
+# CloudFlare 自定义列表只能添加 IP，此处域名会识别绑定的 ip 进行添加
+domain_names:
+  - example1.com
+  - example2.com
+# 不需要通过域名维护的，几乎固定不变的 IP
+fixed_ips:
+  - 1.1.1.1
+# 定时更新的时间，单位分钟
+interval_minutes: 5
+# 是否替换列表，如果为 false，则会在列表后面追加 IP，如果为 true，则会先清空原有列表，再添加 IP
+replace_list: true
